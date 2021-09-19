@@ -40,6 +40,8 @@ public class MainScreen {
     private MobileElement fishCategory;
     @FindBy(id = "vegetarian")
     private MobileElement vegetarianCategory;
+    @FindBy(id = "vegan")
+    private MobileElement veganCategory;
     @FindBy(id = "desserts")
     private MobileElement dessertsCategory;
     @FindBy(xpath = "XCUIElementTypeScrollView[1]")
@@ -56,10 +58,8 @@ public class MainScreen {
     private List<MobileElement> clearText;
     @FindBy(xpath = "//XCUIElementTypeScrollView/XCUIElementTypeButton")
     private List<MobileElement> returnedSearchResults;
-
-
-
-
+    @FindBy(xpath = "//nonExistingButton")
+    private MobileElement nonExistingButton;
 
 
     public MainScreen(IOSDriver<MobileElement> driver) {
@@ -127,6 +127,7 @@ public class MainScreen {
         }
 
     public void tapCookbooksScreen() {
-        cookbooksButton.click();
+//        cookbooksButton.click();
+        nonExistingButton.click();
     }
 }
