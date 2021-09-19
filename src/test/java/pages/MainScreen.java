@@ -56,7 +56,12 @@ public class MainScreen {
     private List<MobileElement> clearText;
     @FindBy(xpath = "//XCUIElementTypeScrollView/XCUIElementTypeButton")
     private List<MobileElement> returnedSearchResults;
-
+    @FindBy(xpath = "//dummyHeader")
+    private MobileElement dummyHeader;
+    @FindBy(xpath = "//dummyHeaderTwo")
+    private MobileElement dummyHeaderTwo;
+    @FindBy(xpath = "//dummyHeaderThree")
+    private MobileElement dummyHeaderThree;
 
 
 
@@ -71,6 +76,11 @@ public class MainScreen {
     public boolean isQuickAndEasyHeaderDisplayed() {
         Helpers.waitForElement(quickAndEasyHeader);
         return quickAndEasyHeader.isDisplayed();
+    }
+
+    public boolean isHeaderDisplayed() {
+        Helpers.waitForElement(dummyHeader);
+        return dummyHeader.isDisplayed();
     }
 
     public boolean isCookbooksButtonDisplayed() {
