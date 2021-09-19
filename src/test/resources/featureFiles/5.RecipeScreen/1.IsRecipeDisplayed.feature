@@ -1,0 +1,7 @@
+@sanityX
+Feature: Verify Recipe screen
+
+  Scenario: Reopen app
+    Given App is reopened
+    When App is opened
+      Then Main screen is displayed properly
